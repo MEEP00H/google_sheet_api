@@ -1,0 +1,15 @@
+<h1 class="text-center">{{title}}</h1>
+<form action="/api/users" method="post">
+    <div class="form-group">
+        <label for="name">Name</label>
+        <input type="text" name="name" class="form-control">
+    </div>
+    <input type="submit" value="Add User" class="mt-3 btn btn-success">
+</form>
+
+<div class="mt-3">User</div>
+<ul class="mt-3 list-group">
+    {{#each users}}
+    <li class="list-group-item">{{this.name}}</li>
+    {{/each}}
+</ul>
